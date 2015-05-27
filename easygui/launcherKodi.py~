@@ -1,0 +1,17 @@
+from easygui import *
+from subprocess import call
+import sys
+
+while 1:
+    choices = [
+	"OK"
+    ]
+
+    image = "kodi.png"
+    msg = "Lancement de Kodi"
+    title = "Lanceur"
+
+    reply = buttonbox(image=image, msg=msg, title=title, choices=choices, cancel_choice='OK')
+    if reply == "OK":
+	    call(["kodi",""])
+    sys.exit(0)

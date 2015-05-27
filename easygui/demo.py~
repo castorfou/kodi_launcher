@@ -1,0 +1,14 @@
+from easygui import *
+from subprocess import call
+import sys
+
+while 1:
+
+    msg = "Lancement de Kodi"
+    title = "Please Confirm"
+    if ccbox(msg, title):     # show a Continue/Cancel dialog
+	call(["kodi",""])
+        sys.exit(0) 
+    else:
+        sys.exit(0)           # user chose Cancel
+
