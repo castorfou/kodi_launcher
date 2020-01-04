@@ -9,7 +9,7 @@ try:
 	fcntl.lockf(fp, fcntl.LOCK_EX | fcntl.LOCK_NB)
 	while 1:
 	    choices = [
-		"OK"
+		"Enfants", "Parents"
 	    ]
 
 	    image = "kodi.png"
@@ -17,7 +17,7 @@ try:
 	    title = "Lanceur"
 
 	    reply = buttonbox(image=image, msg=msg, title=title, choices=choices, cancel_choice='OK')
-	    if reply == "OK":
+	    if reply == "Enfants":
 		    call(["kodi",""])
 	    sys.exit(0)
 except IOError:
