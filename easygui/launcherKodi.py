@@ -18,7 +18,10 @@ try:
 
 	    reply = buttonbox(image=image, msg=msg, title=title, choices=choices, cancel_choice='OK')
 	    if reply == "Enfants":
-		    call(["kodi",""])
+		    call(["/home/guillaume/Applications/switch_kodi/kodi_enfants.sh",""])
+            if reply == "Parents":
+                    call(["/home/guillaume/Applications/switch_kodi/kodi_parents.sh",""])
+
 	    sys.exit(0)
 except IOError:
     # another instance is running
